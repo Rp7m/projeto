@@ -5,7 +5,7 @@ const routes = require('./routes');
 
 const server = express();
 
-mongoose.connect('mongodb+srv://omnistackAdm:omnistackAdm@cluster0.cabvw.mongodb.net/omnistack8?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://<user>:<senha>@cluster0.cabvw.mongodb.net/omnistack8?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true
     
