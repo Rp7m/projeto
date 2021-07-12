@@ -16,7 +16,7 @@ const DevSchema = new Schema({
         type: String,
         required: true,
     },
-   /* likes: [{
+   likes: [{
         type: Schema.Types.ObjectId,
         ref: 'Dev',
     }],
@@ -24,7 +24,6 @@ const DevSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Dev',
     }],
-    */
 
 }, {
     timestamps: true,

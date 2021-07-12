@@ -3,21 +3,13 @@ const express = require('express');
 const routes = express.Router();
 
 const DevController = require('./controllers/DevController');
+const LikeControler = require('./controllers/LikeControler');
+const DislikeControler = require('./controllers/DislikeControler');
 
-/*
-routes.get('/', (req, res) => {
-    return res.send({ message: `Hello word ${req.query.name}`});
-}); 
-
-*/
-
+routes.get('/devs', DevController.index);
 routes.post('/devs', DevController.store);
-
-
-/*(req, res) =>{
-    console.log(req.body);
-    return res.json(req.body);
-}); */
+routes.post('/devs/:devId/likes', LikeControler.store);
+routes.post('/devs/:devId/dislikes', DislikeControler.store);
 
 
 module.exports = routes;
